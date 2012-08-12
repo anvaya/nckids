@@ -1,0 +1,230 @@
+propel:
+  sf_guard_user_profile:
+    _attributes:            { phpName: sfGuardUserProfile }
+    id:
+    user_id:                { type: integer, foreignTable: sf_guard_user, foreignReference: id, required: true, onDelete: cascade }
+    employee_id:            { type: integer, foreignTable: employee, foreignReference: id }
+
+  frequency:
+    id:
+    name:           { type: varchar(255), required: true }
+    weekly_hours:   { type: float, default: 0.00, size: 10, scale: 2 }
+    description:    { type: varchar(255) }
+    sort_order:     { type: varchar(255) } # ALTER TABLE `frequency` ADD `sort_order` VARCHAR( 255 ) NULL
+  
+  district:
+    id:
+    name:           { type: varchar(255), required: true }
+  
+  icd9:
+    id:
+    name:           { type: varchar(255), required: true }
+  
+  service:
+    id:
+    name:           { type: varchar(255), required: true }
+  
+  county:
+    id:
+    name:           { type: varchar(255), required: true }
+  
+  job:
+    id:
+    name:           { type: varchar(255), required: true }
+    alt_name:       { type: varchar(255), required: false } # ALTER TABLE `job` ADD `alt_name` VARCHAR( 255 ) NULL
+
+  office:
+    id:
+    name:           { type: varchar(255), required: true }
+
+  employee_location:
+    id:
+    name:           { type: varchar(255), required: true }
+
+  client:
+    id:
+    first_name:        { type: varchar(255), required: true }
+    last_name:         { type: varchar(255), required: true }
+    dob:               { type: timestamp }
+    parent_first:      { type: varchar(255) }
+    parent_last:       { type: varchar(255) }
+    parent2_first:     { type: varchar(255) }
+    parent2_last:      { type: varchar(255) }
+    address:           { type: varchar(255) }
+    address_2:         { type: varchar(255) }
+    city:              { type: varchar(255) }
+    state:             { type: varchar(255) }
+    zip:               { type: varchar(10) }
+    county_id:         { type: integer, primaryKey: false, required: false, foreignTable: county, foreignReference: id, onDelete: setnull, onUpdate: setnull }
+    district_id:       { type: integer, primaryKey: false, required: false, foreignTable: district, foreignReference: id, onDelete: setnull, onUpdate: setnull }
+    home_phone:        { type: varchar(255) }
+    work_phone:        { type: varchar(255) }
+    cell_phone:        { type: varchar(255) }
+    blue_card:         { type: boolean, default: 0 }
+    immunizations:     { type: boolean, default: 0 }
+    waiting_list:      { type: timestamp }
+    is_iep:            { type: boolean, default: 0 }   # ALTER TABLE `client` ADD `is_iep` TINYINT( 4 ) NOT NULL DEFAULT '0' AFTER `waiting_list` 
+    physical_exp:      { type: timestamp }
+    pediatrician:      { type: varchar(255) } # ALTER TABLE `client` ADD `pediatrician` VARCHAR( 255 ) NULL DEFAULT NULL AFTER `physical_exp`
+    notes:             { type: longvarchar }
+    #service_coord_id:  { type: integer, primaryKey: false, required: false, foreignTable: employee, foreignReference: id, onDelete: setnull }  #  ALTER TABLE `client` ADD `service_coord_id` INTEGER; ALTER TABLE `client` ADD INDEX `client_FI_3` ( `service_coord_id` ) ; ALTER TABLE `client` ADD CONSTRAINT `client_FK_3` FOREIGN KEY ( `service_coord_id` ) REFERENCES `employee` ( `id` ) ON DELETE SET NULL ;
+                        # SET FOREIGN_KEY_CHECKS = 0;
+                        # ALTER TABLE `client` DROP FOREIGN KEY client_FK_3;
+                        # ALTER TABLE `client` DROP INDEX `client_FI_3`;
+                        # ALTER TABLE `client` DROP `service_coord_id`;
+                        # SET FOREIGN_KEY_CHECKS = 1;
+    service_coordinator_id:   # ALTER TABLE `client` ADD `service_coordinator_id` INTEGER; ALTER TABLE `client` ADD INDEX `client_FI_3` ( `service_coordinator_id` ) ; ALTER TABLE `client` ADD CONSTRAINT `client_FK_3` FOREIGN KEY ( `service_coordinator_id` ) REFERENCES `service_coordinator` ( `id` ) ON DELETE SET NULL ;
+    external_service:  { type: boolean, default: 0 }  #  ALTER TABLE `client` ADD `external_service` TINYINT(4) DEFAULT 0;
+    created_at:
+    updated_at:
+
+  employee:
+    id:
+    first_name:               { type: varchar(255), required: true }
+    last_name:                { type: varchar(255), required: true }
+    middle:                   { type: varchar(255) }
+    address:                  { type: varchar(255) }
+    address_2:                { type: varchar(255) }
+    city:                     { type: varchar(255) }
+    state:                    { type: varchar(255) }
+    zip:                      { type: varchar(10) }
+    county:                   { type: varchar(255) }
+    home_phone:               { type: varchar(255) }
+    cell_phone:               { type: varchar(255) }
+    company_email:            { type: varchar(255) }
+    personal_email:           { type: varchar(255) }
+    license_number:           { type: varchar(255) }
+    license_expiration:       { type: timestamp }
+    dob:                      { type: timestamp }
+    doh:                      { type: timestamp }
+    dof:                      { type: timestamp }
+    job_id:                   { type: integer, primaryKey: false, required: false, foreignTable: job, foreignReference: id, onDelete: setnull, onUpdate: setnull }
+    ssn:                      { type: varchar(255) }
+    health_insurance:         { type: boolean, default: 0 }
+    retirement_plan:          { type: boolean, default: 0 }
+    suplimental_health:       { type: boolean, default: 0 }
+    supplemental_health_notes: { type: varchar(255) }
+    health_type:              { type: varchar(255) }
+    physical_date:            { type: timestamp }
+    physical_notes:           { type: varchar(255) }  # ALTER TABLE `employee` ADD `physical_notes` VARCHAR( 255 ) NULL DEFAULT NULL AFTER `physical_date` 
+    tb_date:                  { type: timestamp }
+    tb_notes:                 { type: varchar(255) }  # ALTER TABLE `employee` ADD `tb_notes` VARCHAR( 255 ) NULL DEFAULT NULL AFTER `tb_date`
+    osha_date:                { type: timestamp }
+    cpr_date:                 { type: timestamp }
+    finger_prints:            { type: boolean, default: 0 }
+    finger_print_notes:       { type: varchar(255) }
+    clearance:                { type: boolean, default: 0 }
+    clearance_notes:          { type: varchar(255) }
+    picture:                  { type: varchar(255) }
+    notes:                    { type: longvarchar }
+    npi:                      { type: varchar(255) }
+    tc_type:                  { type: varchar(255) }
+    tc_effective:             { type: timestamp }
+    tc_number:                { type: varchar(255) }
+    tc_exp:                   { type: timestamp }
+    has_keys:                 { type: boolean, default: 0 }
+    keys_returned:            { type: timestamp }  #  ALTER TABLE `employee` ADD `keys_returned` DATETIME NULL DEFAULT NULL AFTER `has_keys`
+    has_email:                { type: boolean, default: 0 }
+    email_removed:            { type: timestamp } # ALTER TABLE `employee` ADD `email_removed` DATETIME NULL DEFAULT NULL AFTER `has_email`
+    has_dist_list:            { type: boolean, default: 0 }
+    dist_list_removed:        { type: timestamp } # ALTER TABLE `employee` ADD `dist_list_removed` DATETIME NULL DEFAULT NULL AFTER `has_dist_list`
+    has_server_access:        { type: boolean, default: 0 }
+    server_removed:           { type: timestamp } # ALTER TABLE `employee` ADD `server_removed` DATETIME NULL DEFAULT NULL AFTER `has_server_access`
+    is_team_member:           { type: boolean, default: 0 }  # ALTER TABLE `employee` ADD `is_team_member` TINYINT( 4 ) NULL DEFAULT '0'
+
+  employee_finger_to_location:
+    employee_id:              { type: integer, primaryKey: true, required: true, foreignTable: employee, foreignReference: id, onDelete: cascade, onUpdate: cascade }
+    location_id:              { type: integer, primaryKey: true, required: true, foreignTable: employee_location, foreignReference: id, onDelete: cascade, onUpdate: cascade }
+
+  employee_to_location:
+    employee_id:              { type: integer, primaryKey: true, required: true, foreignTable: employee, foreignReference: id, onDelete: cascade, onUpdate: cascade }
+    location_id:              { type: integer, primaryKey: true, required: true, foreignTable: employee_location, foreignReference: id, onDelete: cascade, onUpdate: cascade }
+
+  physical:
+    employee_id:    { type: integer, primaryKey: true, required: true, foreignTable: employee, foreignReference: id, onDelete: cascade, onUpdate: cascade }
+    date_given:     { type: timestamp, required: true }
+
+  client_service:
+    id:
+    client_id:      { type: integer, primaryKey: false, required: false, foreignTable: client, foreignReference: id, onDelete: setnull, onUpdate: setnull }
+    employee_id:    { type: integer, primaryKey: false, required: false, foreignTable: employee, foreignReference: id, onDelete: setnull, onUpdate: setnull }
+    service_id:     { type: integer, primaryKey: false, required: false, foreignTable: service, foreignReference: id, onDelete: setnull, onUpdate: setnull }
+    frequency_id:   { type: integer, primaryKey: false, required: false, foreignTable: frequency, foreignReference: id, onDelete: setnull, onUpdate: setnull }
+    start_date:     { type: timestamp }
+    end_date:       { type: timestamp }
+    change_date:    { type: timestamp }
+    notes:          { type: longvarchar }
+    icd9_id:        { type: integer, primaryKey: false, required: false, foreignTable: icd9, foreignReference: id, onDelete: setnull, onUpdate: setnull }
+    authorization:  { type: varchar(255) }
+    physicians_order: { type: boolean, default: 0 }
+    office_id:      { type: integer, primaryKey: false, required: false, foreignTable: office, foreignReference: id, onDelete: setnull, onUpdate: setnull }
+    waiting_list:   { type: boolean, default: 0 }  # ALTER TABLE `client_service` ADD `waiting_list` TINYINT( 4 ) NOT NULL DEFAULT '0' AFTER `office_id` 
+    object_type:
+      type:           varchar(255)
+      inheritance:           
+        preschool:     Preschool
+        seit:          Seit
+        ei:            Ei
+        classroom:     Classroom
+        school_age:    SchoolAge
+
+  setting:
+    s_key:           { type: varchar, size: 255, index: unique }
+    s_value:         { type: varchar, size: 255 }
+
+  service_coordinator:
+    id:
+    name:             { type: varchar, size: 255 }
+    is_active:        { type: boolean, default: 1 }
+
+
+  area_of_concern:
+    id:                       ~
+    job_id:                   { type: integer, primaryKey: false, required: false, foreignTable: job, foreignReference: id, onDelete: setnull, onUpdate: setnull }
+    name:                     { type: varchar, size: 255 }
+    
+  objective:
+    id:                       ~
+    short_name:               { type: varchar, size: 255 }
+    long_name:                { type: longvarchar }
+    area_of_concern_id:       { type: integer, required: true, foreignTable: area_of_concern, foreignReference: id, onDelete: cascade, onUpdate: cascade }
+
+  prompt:
+    id:                       ~
+    name:                     { type: varchar, size: 255 }
+    objective_id:             { type: integer, foreignTable: objective, foreignReference: id, onDelete: setnull, onUpdate: setnull }
+
+  level:
+    id:                       ~
+    name:                     { type: varchar, size: 255 }
+
+  note_entry:
+    id:                       ~
+    employee_id:              { type: integer, primaryKey: false, required: false, foreignTable: employee, foreignReference: id, onDelete: setnull, onUpdate: setnull }
+    client_id:                { type: integer, primaryKey: false, required: false, foreignTable: client, foreignReference: id, onDelete: setnull, onUpdate: setnull }
+    client_service_id:        { type: integer, primaryKey: false, required: false, foreignTable: client_service, foreignReference: id, onDelete: setnull, onUpdate: setnull }
+    office_id:                { type: integer, primaryKey: false, required: false, foreignTable: office, foreignReference: id, onDelete: setnull, onUpdate: setnull }
+    frequency_id:             { type: integer, primaryKey: false, required: false, foreignTable: frequency, foreignReference: id, onDelete: setnull, onUpdate: setnull }
+
+    service_date:             { type: timestamp }
+    time_in:                  { type: timestamp }
+    time_out:                 { type: timestamp }
+    cpt_code:                 { type: varchar, size: 255 }
+    units:                    { type: varchar, size: 25 }
+    absent:                   { type: integer, default: 0 }
+    comments:                 { type: longvarchar }
+    created_at:
+    updated_at:
+
+  note_entry_kids:
+    note_entry_id:            { type: integer, primaryKey: true, required: true, foreignTable: note_entry, foreignReference: id, onDelete: cascade, onUpdate: cascade }
+    client_id:                { type: integer, primaryKey: true, required: true, foreignTable: client, foreignReference: id, onDelete: cascade, onUpdate: cascade }
+
+  entry_concern:
+    id:                       ~
+    note_entry_id:            { type: integer, primaryKey: false, required: true, foreignTable: note_entry, foreignReference: id, onDelete: cascade, onUpdate: cascade }
+    area_of_concern_id:       { type: integer, primaryKey: false, required: false, foreignTable: area_of_concern, foreignReference: id, onDelete: setnull, onUpdate: setnull }
+    objective_id:             { type: integer, primaryKey: false, required: false, foreignTable: objective, foreignReference: id, onDelete: setnull, onUpdate: setnull }
+    prompt_id:                { type: integer, primaryKey: false, required: false, foreignTable: prompt, foreignReference: id, onDelete: setnull, onUpdate: setnull }
+    level_id:                 { type: integer, primaryKey: false, required: false, foreignTable: level, foreignReference: id, onDelete: setnull, onUpdate: setnull }
+    accuracy:                 { type: varchar, size: 255 }

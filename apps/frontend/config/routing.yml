@@ -1,0 +1,90 @@
+service_coordinator:
+  class: sfPropelRouteCollection
+  options:
+    model:                ServiceCoordinator
+    module:               service_coordinator
+    prefix_path:          service_coordinator
+    column:               id
+    with_wildcard_routes: true
+
+job:
+  class: sfPropelRouteCollection
+  options:
+    model:                Job
+    module:               job
+    prefix_path:          job
+    column:               id
+    with_wildcard_routes: true
+
+service:
+  class: sfPropelRouteCollection
+  options:
+    model:                Service
+    module:               service
+    prefix_path:          service
+    column:               id
+    with_wildcard_routes: true
+
+frequency:
+  class: sfPropelRouteCollection
+  options:
+    model:                Frequency
+    module:               frequency
+    prefix_path:          frequency
+    column:               id
+    with_wildcard_routes: true
+
+client:
+  class: sfPropelRouteCollection
+  options:
+    model:                Client
+    module:               client
+    prefix_path:          client
+    column:               id
+    with_wildcard_routes: true
+
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+ 
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
+ 
+sf_guard_password:
+  url:   /request_password
+  param: { module: sfGuardAuth, action: password }
+  
+users:
+  url:    /users
+  param:  { module: sfGuardUser, action: index }
+
+physical:
+  class: sfPropelRouteCollection
+  options:
+    model:               Physical
+    module:              physical
+    prefix_path:         physical
+    column:              id
+    with_wildcard_routes: true
+
+employee:
+  class: sfPropelRouteCollection
+  options:
+    model:               Employee
+    module:              employee
+    prefix_path:         employee
+    column:              id
+    with_wildcard_routes: true
+
+# default rules
+homepage:
+  url:   /
+  param: { module: default, action: index }
+
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

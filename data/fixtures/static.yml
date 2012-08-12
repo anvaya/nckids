@@ -1,0 +1,122 @@
+sfGuardUser:
+  sfGuardUser_1:
+    username: admin
+    password: admin
+    is_active: '1'
+    is_super_admin: '1'
+sfGuardGroup:
+  sfGuardGroup_1:
+    name: admin
+    description: 'Administrator group'
+sfGuardUserGroup:
+  sfGuardUserGroup_1_1:
+    user_id: sfGuardUser_1
+    group_id: sfGuardGroup_1
+sfGuardPermission:
+  sfGuardPermission_1:
+    name: admin
+    description: 'Administrator permission'
+sfGuardGroupPermission:
+  sfGuardGroupPermission_1_1:
+    group_id: sfGuardGroup_1
+    permission_id: sfGuardPermission_1
+sfBreadNavApplication:
+  sfBreadNavApplication_1:
+    name: default
+    application: frontend
+    css: navmenu
+sfBreadNav:
+  sfBreadNav_1:
+    page: Dashboard
+    title: ''
+    module: default
+    action: index
+    credential: ''
+    catchall: '1'
+    tree_left: '1'
+    tree_right: '18'
+    tree_parent: '0'
+    scope: sfBreadNavApplication_1
+  sfBreadNav_2:
+    page: Clients
+    title: ''
+    module: client
+    action: index
+    credential: ''
+    catchall: '1'
+    tree_left: '2'
+    tree_right: '3'
+    tree_parent: '0'
+    scope: sfBreadNavApplication_1
+  sfBreadNav_3:
+    page: Employees
+    title: ''
+    module: employee
+    action: index
+    credential: ''
+    catchall: '1'
+    tree_left: '4'
+    tree_right: '5'
+    tree_parent: '0'
+    scope: sfBreadNavApplication_1
+  sfBreadNav_4:
+    page: Reports
+    title: ''
+    module: report
+    action: index
+    credential: ''
+    catchall: '1'
+    tree_left: '6'
+    tree_right: '15'
+    tree_parent: '0'
+    scope: sfBreadNavApplication_1
+  sfBreadNav_5:
+    page: SEDCAR
+    title: ''
+    module: report
+    action: sedcar
+    credential: ''
+    tree_left: '7'
+    tree_right: '8'
+    tree_parent: '0'
+    scope: sfBreadNavApplication_1
+  sfBreadNav_6:
+    page: 'SEDCAR 2'
+    title: ''
+    module: report
+    action: sedcar2
+    credential: ''
+    tree_left: '9'
+    tree_right: '10'
+    tree_parent: '0'
+    scope: sfBreadNavApplication_1
+  sfBreadNav_7:
+    page: 'Core Evaluation'
+    title: ''
+    module: report
+    action: coreEval
+    credential: ''
+    tree_left: '11'
+    tree_right: '12'
+    tree_parent: '0'
+    scope: sfBreadNavApplication_1
+  sfBreadNav_8:
+    page: 'Annual Review and Quarterly'
+    title: ''
+    module: report
+    action: arq
+    credential: ''
+    tree_left: '13'
+    tree_right: '14'
+    tree_parent: '0'
+    scope: sfBreadNavApplication_1
+  sfBreadNav_9:
+    page: Settings
+    title: ''
+    module: system
+    action: index
+    credential: ''
+    tree_left: '16'
+    tree_right: '17'
+    tree_parent: '0'
+    scope: sfBreadNavApplication_1

@@ -1,0 +1,46 @@
+Blueprint CSS - 0.8: http://blueprintcss.org
+in apps/frontend/config/view.yml add:
+  stylesheets:    [/mdToolsPlugin/css/blueprint/src/reset.css, /mdToolsPlugin/css/blueprint/screen.css, /mdToolsPlugin/css/blueprint/print.css {media: print}]
+
+in apps/frontend/templates/layout/php add:
+  <!--[if IE]><link rel="stylesheet" href="/mdToolsPlugin/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+
+
+
+
+FCKEditor - 2.6.4: http://www.fckeditor.net/
+(this has been modified from downloaded version)
+in apps/frontend/config/settings.yml add:
+  rich_text_fck_js_dir: mdToolsPlugin/js/fckeditor
+
+
+
+
+
+Swift Mailer - 3.3.3: http://swiftmailer.org/
+
+
+
+
+jQuery - 1.3.2: http://jquery.com
+in apps/frontend/config/view.yml add:
+  javascripts:    [/mdToolsPlugin/js/jquery/jquery.js]
+  
+jQuery-UI - 1.7.1: http://jqueryui.com/
+must have jquery and also add to apps/frontend/modules/config/view.yml :
+  stylesheets:    [/mdToolsPlugin/css/jquery/smoothness/jquery-ui.css]
+  javascripts:    [/mdToolsPlugin/js/jquery/jquery-ui.js]
+  
+SlimBox - 2.0.2: http://www.digitalia.be/software/slimbox2
+must have jquery and also add to apps/frontend/modules/config/view.yml :
+  stylesheets:    [/mdToolsPlugin/css/jquery/slimbox2.css]
+  javascripts:    [/mdToolsPlugin/js/jquery/plugins/slimbox2.js]
+  
+
+
+sfWidgetFormTextareaFck:
+use this in form objects to have a fck editor
+
+jQuery Helper:
+use as a regular helper <?php use_helper('jQuery') ?>
+this will include the jquery library and allow replacement of symfony default prototype plugin

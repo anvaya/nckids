@@ -1,0 +1,47 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Employee
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          employee
+    with_propel_route:     1
+    css:                   false
+
+    config:
+      actions: ~
+      fields:
+        home_phone_formatted: { label: Home Phone }
+        cell_phone_formatted: { label: Cell Phone }
+      list:
+        max_per_page:   500
+        display: [=first_name, =last_name, job, home_phone_formatted, cell_phone_formatted, company_email]
+        sort: [last_name, asc]
+        object_actions:
+          _edit:        -
+          _delete:      -
+          addcomment:   { label: Badge, action: printBadge }
+        batch_actions:
+          printBadge:  { label: Print Badges }
+
+      filter:  ~
+      form:    ~
+      edit:
+        title: "Editing - <img src=\"/images/user.png\" alt=\"User\" /> %%first_name%% %%last_name%% (%%id%%)"
+        display:
+          Contact:      [first_name, last_name, middle, home_phone, cell_phone, company_email, personal_email, address, address_2, city, state, zip, county]
+          Personal:    [dob, ssn, doh, job_id, license_number, license_expiration, tc_type, tc_effective, tc_number, tc_exp, npi]
+          State Requirements:  [employee_to_location_list, clearance_notes, employee_finger_to_location_list, finger_print_notes]
+          Health Information:       [physical_date, physical_notes, tb_date, tb_notes, osha_date, cpr_date, health_insurance, health_type, suplimental_health, supplemental_health_notes, retirement_plan]
+          Admin:        [_has_keys, _has_email, _has_dist_list, _has_server_access, is_team_member, dof, notes, picture]
+
+      new:
+        display:
+          Contact:      [first_name, last_name, middle, home_phone, cell_phone, company_email, personal_email, address, address_2, city, state, zip, county]
+          Personal:    [dob, ssn, doh, job_id, license_number, license_expiration, tc_type, tc_effective, tc_number, tc_exp, npi]
+          State Requirements:  [employee_to_location_list, clearance_notes, employee_finger_to_location_list, finger_print_notes]
+          Health Information:       [physical_date, physical_notes, tb_date, tb_notes, osha_date, cpr_date, health_insurance, health_type, suplimental_health, supplemental_health_notes, retirement_plan]
+          Admin:        [has_keys, has_email, has_dist_list, has_server_access, is_team_member, dof, notes, picture]

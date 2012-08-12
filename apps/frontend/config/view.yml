@@ -1,0 +1,21 @@
+default:
+  components:
+    sidebar:  [bar, side]
+    editbar:  []
+
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        North Country Kids, Inc. - Database
+    description:  north country kids database
+    keywords:     north country kids
+    language:     en
+    robots:       index, follow
+
+  stylesheets:    [print.css {media: print}, menu.css, common.css, form.css, tables.css, /mdToolsPlugin/css/jquery/smoothness/jquery-ui.css, /mdToolsPlugin/css/jquery/autocomplete.css, main.css, facebox.css, jquery.multiSelect.css]
+
+  javascripts:    [jquery-1.4.2.min.js, /mdToolsPlugin/js/jquery/jquery-ui.js, jquery.autocomplete.min.js, facebox.js, jquery.multiSelect.js, jquery.maskedinput-1.2.2.min.js]
+
+  has_layout:     on
+  layout:         layout

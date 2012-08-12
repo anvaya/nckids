@@ -1,0 +1,26 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           ServiceCoordinator
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          service_coordinator
+    with_propel_route:     1
+    css:                   false
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title: Services Coordinators
+        display: [=name]
+        object_actions:
+          _edit: ~
+      filter:
+        class: false
+      form:    ~
+      edit:    ~
+      new:     ~

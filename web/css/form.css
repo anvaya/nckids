@@ -1,0 +1,34 @@
+
+
+
+form > ul, form > ul > li {
+margin: 10px 0;
+padding: 0px;
+list-style: none;
+list-style-type: none;
+list-style-image: none;
+}
+
+/* Form style */
+form input[type=text]{font-size: 1em;}
+form select.date { width: 90px; padding: 2px}
+form select.filter_date { width: 55px; padding: 1px;-moz-border-radius: 0px; -webkit-border-radius:0px; }
+form label { font-weight:bold;display: inline-block; float: left; height: 2em; line-height: 2em; width: 200px; padding-right:20px;font-size: 1.2em; text-align: right;}
+form input[type=text], form textarea, form select { width: 280px; margin: 0; padding: 5px; color: #666; background: #f5f5f5; border: 1px solid #b2b2b2; font:1.2em "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif; -moz-border-radius: 5px; -webkit-border-radius:5px; }
+form input[type=text]:focus, form textarea:focus, form select:focus { border: 1px solid #999; background-color: #fff; color:#333; }
+form input[type=submit] { width: 185px; cursor: pointer; border: 1px solid #222; background:#333; color:#fff; -moz-border-radius: 5px; -webkit-border-radius:5px; }
+form input[type=submit]:hover { background:#444; }
+form fieldset { margin-bottom: 20px; padding:20px; border:1px solid #eee; -moz-border-radius: 5px; -webkit-border-radius:5px; }
+form legend { padding:7px 10px; font-size: 1.5em; font-weight:bold; color:#000; border:1px solid #eee; -moz-border-radius: 5px; -webkit-border-radius:5px; }
+
+form li.button{
+  padding-left: 170px;
+}
+form .error_field {background: #FBE3E4 url('assets/error.gif') no-repeat 10px center; line-height: 2em; color:#8a1f11;border: 1px solid #FBC2C4;  }
+form br {
+clear : left;
+}
+
+
+#sf_admin_bar form input[type=text] {
+  width: 95%;}

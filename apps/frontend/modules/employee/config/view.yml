@@ -1,0 +1,15 @@
+all:
+  javascripts: [tableActions.min.js]
+  components:
+    sidebar:  [employee, sidebar]
+newSuccess:
+  components:
+    editbar:  [employee, editbarNew]
+editSuccess:
+  components:
+    editbar:  [employee, editbarEdit]
+    sidebar:  [employee, sidebarEdit]
+workloadSuccess:
+  components:
+    sidebar:  [employee, sidebarEdit]
+    editbar:  [bar, editbarReport]

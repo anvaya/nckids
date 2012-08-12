@@ -1,0 +1,176 @@
+
+#sf_admin_bar input {
+width: 100%;
+}
+tr.selected {
+background-color: #E8E8E8;
+}
+table.rowstylehover-rowHover tr:hover {
+background-color: #f6f6f6;
+}
+
+table tr.late {
+background-color: #F59B93;
+}
+
+ul.report_form {
+list-style: none;
+margin: 0px;
+}
+
+.notActive {
+display: none;
+background-color: #FFB5B5;
+}
+
+.error_list {
+  list-style: none;
+  margin-bottom: 0px;
+  margin-left:160px;
+  padding:0;
+  color: #F14545;
+}
+.sf_admin_form_row {
+margin: 10px 0;
+overflow: hidden;
+}
+#ui-datepicker-div {
+z-index:200;
+}
+
+ul.clientServicePopup {
+margin:0;padding:0;
+list-style:none;
+
+}
+ul.clientServicePopup li {
+text-align: left;
+margin-bottom: 10px;
+}
+ul.clientServicePopup li label {
+display:block;
+font-weight:bold;
+width:110px;
+}
+
+
+#sf_admin_bar ul {
+list-style: none;
+margin: 0px;
+padding: 0px;
+background-color: transparent;
+width: 100%;
+}
+
+#sf_admin_bar ul label {
+display: block;
+text-align:left;
+float: none;
+font-weight: bold;
+}
+#sf_admin_bar ul li {
+width: 100%;
+float: left;
+padding-left: 0px;
+padding-right: 0px;
+}
+.sf_admin_filter ul {
+border: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+}
+.sf_admin_filter ul li {
+border: 0;
+margin: 0;
+padding: 10px;
+}
+
+.row_classroom {
+  background-color:#FFCB8F;
+}
+.row_preschool {
+background-color:#FFAFF6;
+}
+.row_seit {
+background-color:#509F4F;
+}
+.row_ei {
+background-color:#FFF153;
+}
+.row_school_age {
+background-color:#E1B3EF;
+}
+.is_iep {
+  background-color:#BFFFF8;
+}
+.absent_note {
+  background-color:#FEFFBF;
+}
+
+.hidden {
+display:none;
+}
+
+a.hasNotes {
+display: inline-block;
+width: 16px;
+height: 16px;
+background: transparent url('/images/exclamation.png') no-repeat;
+margin:auto;
+padding: 0 5px;
+outline: none;
+}
+.checkbox_list {
+list-style: none;
+padding-left: 0px;
+overflow: hidden;
+}
+.checkbox_list li {
+overflow: hidden;
+width: 100%;
+}
+.checkbox_list li label {
+  font-weight: normal;
+}
+.tiny_list {width: 150px}
+.tiny_list label {width:80px;}
+.tiny_list input {width:10px;}
+a.serviceEdit {
+ text-indent: -9999px;
+ display: inline-block;
+ outline: none;
+ width: 16px;
+ height: 16px;
+ padding: 0 5px;
+ background: transparent url('/images/icons/brick_edit.png') no-repeat;
+}
+
+
+.note {
+  display:inline-block;
+float:left;
+height:2em;
+line-height:2em;
+padding-right:20px;
+text-align:right;
+width:200px;
+font-size: 11px;
+color: rgb(160, 160, 160);
+margin-top: 0px;
+font-weight: normal;
+}
+
+
+.dailyLog td, .dailyLog th {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.dailyLog .headerRow td, .dailyLog .headerRow th {
+  font-weight: bold;
+  background-color: #4A4A4A;
+  color: #fff;
+}
+
+.groupType { width: 25%; float: left; padding-right: 10px;}

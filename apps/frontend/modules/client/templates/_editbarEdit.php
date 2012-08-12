@@ -1,0 +1,2 @@
+<a href="<?php echo url_for('client/index') ?>"><img src="/images/icons/cancel.gif" width="48" height="48" alt="Cancel" /><br />CANCEL</a>
+<a class="save_link" href="<?php echo url_for('client/edit?id='. $client_id) ?>"><img src="/images/icons/save.gif" width="48" height="48" alt="Save" /><br />SAVE</a>

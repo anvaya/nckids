@@ -1,0 +1,27 @@
+# default values
+all:
+  .array:
+    voucher_ignore_services:
+      9: evaluation
+      15: supplemental
+      16: core
+
+  service_type_aide_id: 12
+
+  settings:
+    date_format:  m/d/Y
+    related_service_ids: [1, 2, 4, 8]
+    classroom_service_id: 10
+  employee:
+    hide_inactive:  true
+    images_dir:     employee
+
+  sf_guard_plugin:
+    success_signin_url:      @homepage # the plugin use the referer as default
+    success_signout_url:     @homepage         # the plugin use the referer as default
+
+#  sf_tiny_doc_plugin:
+#    zip_method:    shell             # the method to zip/unzip : shell | ziparchive
+#    zip_bin:       zip               # the binary to zip   for shell method
+#    unzip_bin:     unzip             # the binary to unzip for shell method
+#    process_dir:   %SF_WEB_DIR%/tmp  # the process directory

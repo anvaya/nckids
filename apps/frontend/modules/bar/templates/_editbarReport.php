@@ -1,0 +1,1 @@
+<a href="#" onClick="window.print(); return false;"><img src="/images/icons/paste.png" width="48" height="48" alt="Print" /><br />PRINT</a>

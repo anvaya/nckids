@@ -1,0 +1,36 @@
+dev:
+  propel:
+    class: sfPropelDatabase
+    param:
+      classname: DebugPDO
+      dsn: 'mysql:host=localhost;dbname=matt_nckids_dev'
+      username: root
+      password: sprint101
+      encoding: utf8
+      persistent: true
+      pooling: true
+test:
+  propel:
+    param:
+      classname: DebugPDO
+all:
+  propel:
+    class: sfPropelDatabase
+    param:
+      classname: PropelPDO
+      dsn: 'mysql:host=localhost;dbname=db'
+      username: root
+      password: rhqq26969
+      encoding: utf8
+      persistent: true
+      pooling: true
+  import:
+    class: sfPropelDatabase
+    param:
+      classname: PropelPDO
+      dsn: 'mysql:host=localhost;dbname=nckids_import'
+      username: root
+      password: rhqq26969
+      encoding: utf8
+      persistent: true
+      pooling: true

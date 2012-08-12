@@ -1,0 +1,14 @@
+sedcarReportSuccess:
+  stylesheets:    [-*, print.css {media: print}]
+  layout: print
+  
+arqReportSuccess:
+  stylesheets:    [-*, print.css {media: print}]
+  layout: print
+
+crqReportSuccess:
+  stylesheets:    [-*, print.css {media: print}]
+  layout: print
+  
+coreEvalReportSuccess:
+  javascripts: [tableActions.min.js]

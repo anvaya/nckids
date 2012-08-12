@@ -1,0 +1,32 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           Client
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          client
+    with_propel_route:     1
+    css:                   false
+
+    config:
+      actions: ~
+      fields:
+        dob: { label: DOB, date_format: MM/dd/yy }
+        physical_expiration: { label: Physical Expire, date_format: MM/dd/yy }
+      list:
+        max_per_page:   200
+        display:    [=first_name, =last_name, parent, home_phone]
+        batch_actions:
+          addressLabels:  { label: Print Address Labels }
+          attendance:  { label: Attendance Sheet }
+          classroomTimesheet:  { label: Classroom Time Sheet }
+          medicaidVoucher:  { label: Medicaid Voucher }
+          aideVoucher:  { label: Aide Vouchers }
+      filter:  ~
+      form:    ~
+      edit:
+        title: "Editing - <img src=\"/images/user.png\" alt=\"User\" /> %%first_name%% %%last_name%% (%%id%%)"
+      new:     ~

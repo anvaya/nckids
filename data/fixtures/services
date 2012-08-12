@@ -1,0 +1,97 @@
+Ei:
+  Ei_1:
+    client_id: Client_2
+    employee_id: Employee_60
+    icd9_id: Icd9_5
+    service_id: Service_1
+    frequency_id: Frequency_2
+    start_date: '2008-01-13 00:00:00'
+    end_date: '2008-07-13 00:00:00'
+    authorization: '22804'
+    physicians_order: '0'
+    notes: ''
+  Ei_2:
+    client_id: Client_2
+    employee_id: Employee_22
+    icd9_id: Icd9_5
+    service_id: Service_3
+    frequency_id: Frequency_2
+    start_date: '2008-04-04 00:00:00'
+    end_date: '2008-07-13 00:00:00'
+    authorization: '23263'
+    physicians_order: '0'
+    notes: ''
+  Ei_638:
+    client_id: Client_28
+    employee_id: Employee_58
+    icd9_id: Icd9_4
+    service_id: Service_4
+    frequency_id: Frequency_40
+    start_date: '2008-01-07 00:00:00'
+    end_date: '2008-07-07 00:00:00'
+    authorization: '22824'
+    physicians_order: '0'
+  Ei_957:
+    client_id: Client_61
+    employee_id: Employee_9
+    service_id: Service_8
+    frequency_id: Frequency_1
+    start_date: '2008-11-23 00:00:00'
+    end_date: '2009-03-20 00:00:00'
+    authorization: '24755'
+    physicians_order: '0'
+Preschool:
+  Preschool_2:
+    client_id: Client_58
+    employee_id: Employee_17
+    service_id: Service_4
+    frequency_id: Frequency_16
+    start_date: '2008-05-06 00:00:00'
+    end_date: '2008-06-26 00:00:00'
+  Preschool_3:
+    client_id: Client_58
+    employee_id: Employee_20
+    service_id: Service_1
+    frequency_id: Frequency_22
+    start_date: '2008-05-06 00:00:00'
+    end_date: '2008-06-26 00:00:00'
+Classroom:
+  Classroom_1:
+    client_id: Client_292
+    employee_id: Employee_20
+    service_id: Service_1
+    frequency_id: Frequency_25
+    start_date: '2007-09-05 00:00:00'
+    end_date: '2008-06-26 00:00:00'
+    office_id: Office_0
+  Classroom_2:
+    client_id: Client_292
+    employee_id: Employee_62
+    service_id: Service_10
+    frequency_id: Frequency_0
+    start_date: '2007-09-05 00:00:00'
+    end_date: '2008-06-26 00:00:00'
+    office_id: Office_0
+  Classroom_4:
+    client_id: Client_293
+    employee_id: Employee_62
+    service_id: Service_10
+    frequency_id: Frequency_39
+    start_date: '2007-09-05 00:00:00'
+    end_date: '2008-06-26 00:00:00'
+    office_id: Office_0
+Seit:
+  Seit_3:
+    client_id: Client_58
+    employee_id: Employee_59
+    service_id: Service_11
+    frequency_id: Frequency_42
+    start_date: '2008-05-06 00:00:00'
+    end_date: '2008-06-26 00:00:00'
+  Seit_4:
+    client_id: Client_156
+    employee_id: Employee_47
+    service_id: Service_11
+    frequency_id: Frequency_14
+    start_date: '2008-05-20 00:00:00'
+    end_date: '2008-06-26 00:00:00'

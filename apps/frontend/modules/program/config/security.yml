@@ -1,0 +1,3 @@
+delete:
+  is_secure:   on        # Only for authenticated users
+  credentials: delete_client_services     # With the admin credential

@@ -1,0 +1,299 @@
+sfGuardUser:
+  sfGuardUser_1:
+    username: admin
+    password: admin
+    is_active: '1'
+    is_super_admin: '1'
+sfGuardGroup:
+  sfGuardGroup_1:
+    name: admin
+    description: 'Administrator group'
+sfGuardUserGroup:
+  sfGuardUserGroup_1_1:
+    user_id: sfGuardUser_1
+    group_id: sfGuardGroup_1
+sfGuardPermission:
+  sfGuardPermission_1:
+    name: admin
+    description: 'Administrator permission'
+sfGuardGroupPermission:
+  sfGuardGroupPermission_1_1:
+    group_id: sfGuardGroup_1
+    permission_id: sfGuardPermission_1
+Job:
+  Job_1:
+    name: 'Network Administrator'
+  Job_2:
+    name: Transcriber
+  Job_3:
+    name: 'Classroom Teacher Assistant'
+  Job_4:
+    name: Psychologist
+  Job_5:
+    name: 'Occupational Therapist, OTR'
+  Job_6:
+    name: 'Classroom Teacher'
+  Job_7:
+    name: 'Special Instruction, SET'
+  Job_8:
+    name: 'Speech Language Pathologist, SLP-CCC'
+  Job_9:
+    name: 'Physical Therapist, PT'
+  Job_10:
+    name: 'Office Support'
+  Job_11:
+    name: Administrator
+  Job_12:
+    name: Accountant
+  Job_13:
+    name: 'EI Paraprofessional'
+  Job_14:
+    name: 'Special Education Teacher, SET'
+  Job_15:
+    name: 'Occupational Therapist, COTA'
+Service:
+  Service_1:
+    name: 'Occupational Therapy'
+  Service_2:
+    name: 'Physical Therapy'
+  Service_3:
+    name: 'Special Instruction'
+  Service_4:
+    name: Speech
+  Service_5:
+    name: Paraprofessional
+  Service_6:
+    name: Respite
+  Service_7:
+    name: 'Service Coordination'
+  Service_8:
+    name: Counseling
+  Service_9:
+    name: Evaluation_(Discontinued)
+  Service_10:
+    name: 'Special Education'
+  Service_11:
+    name: SEIT
+  Service_12:
+    name: '1:1 Aide'
+  Service_13:
+    name: Community
+  Service_14:
+    name: 'Assistive Technology'
+  Service_16:
+    name: 'Supplimental Evaluation'
+  Service_17:
+    name: 'Core Evaluation'
+  Service_18:
+    name: 'physician Supplimental'
+County:
+  County_1:
+    name: Clinton
+  County_2:
+    name: Essex
+District:
+  District_1:
+    name: Beekmantown
+  District_2:
+    name: Chazy
+  District_3:
+    name: Peru
+  District_4:
+    name: Plattsburgh
+  District_5:
+    name: Saranac
+  District_6:
+    name: 'Ausable Valley'
+  District_7:
+    name: 'Northeastern Clinton'
+  District_8:
+    name: 'Northern Adirondack (NAC)'
+  District_9:
+    name: Wesport
+  District_10:
+    name: Elizabethtown
+  District_11:
+    name: 'Lake Placid'
+  District_12:
+    name: Keene
+  District_13:
+    name: Willsboro
+  District_14:
+    name: Ticonderoga
+  District_15:
+    name: 'Saranac Lake'
+Icd9:
+  Icd9_1:
+    name: '299.0'
+  Icd9_2:
+    name: '299.8'
+  Icd9_3:
+    name: '315.3'
+  Icd9_4:
+    name: '315.5'
+  Icd9_5:
+    name: '315.9'
+  Icd9_6:
+    name: '331.3'
+  Icd9_7:
+    name: '759.7'
+  Icd9_8:
+    name: '759.89'
+  Icd9_9:
+    name: '765.02'
+  Icd9_10:
+    name: '767.6'
+  Icd9_11:
+    name: '728.8'
+  Icd9_12:
+    name: '995.2'
+  Icd9_13:
+    name: '389.10'
+  Icd9_14:
+    name: '749.0'
+  Icd9_15:
+    name: '784.69'
+Frequency:
+  Frequency_1:
+    name: '1x Week'
+  Frequency_2:
+    name: '2x Week'
+  Frequency_3:
+    name: '3x Week'
+  Frequency_4:
+    name: '4x Week'
+  Frequency_5:
+    name: '5x Week'
+  Frequency_6:
+    name: '1x Month'
+  Frequency_7:
+    name: '2x Month'
+  Frequency_8:
+    name: '3x Month'
+  Frequency_9:
+    name: '4x Month'
+  Frequency_10:
+    name: '24 Units'
+  Frequency_11:
+    name: '30 Units'
+  Frequency_12:
+    name: '40 Units'
+  Frequency_13:
+    name: '72 Units'
+  Frequency_14:
+    name: 2x60
+  Frequency_15:
+    name: 3x60
+  Frequency_16:
+    name: 4x60
+  Frequency_17:
+    name: 5x60
+  Frequency_18:
+    name: 2x45
+  Frequency_19:
+    name: 3x45
+  Frequency_20:
+    name: 4x45
+  Frequency_21:
+    name: 5x45
+  Frequency_22:
+    name: 1x45
+  Frequency_23:
+    name: 5x3hrs
+  Frequency_24:
+    name: N/A
+  Frequency_25:
+    name: 1x60
+  Frequency_26:
+    name: 2x30
+  Frequency_27:
+    name: Discharge
+  Frequency_28:
+    name: 4x30
+  Frequency_29:
+    name: 3x30
+  Frequency_30:
+    name: 10xmonth
+  Frequency_31:
+    name: 4x60
+  Frequency_32:
+    name: '2x30 2x60'
+  Frequency_33:
+    name: 1x30
+  Frequency_34:
+    name: 3.5x5
+  Frequency_35:
+    name: '4 hrs/week'
+  Frequency_36:
+    name: 2x120
+  Frequency_37:
+    name: '15 hrs wk'
+  Frequency_38:
+    name: '6 hrs week'
+  Frequency_39:
+    name: '5 hrs/day'
+  Frequency_40:
+    name: '4x60 shared'
+  Frequency_41:
+    name: '5x60 shared'
+  Frequency_42:
+    name: '3x shared'
+  Frequency_43:
+    name: 5x30
+  Frequency_44:
+    name: 'co visit 2x month'
+  Frequency_45:
+    name: '5x30 group'
+  Frequency_46:
+    name: '5x30 ind'
+  Frequency_47:
+    name: '5x30 grp/5x30 ind'
+  Frequency_48:
+    name: '1x shared'
+  Frequency_49:
+    name: '5x45 grp/5x45 ind'
+  Frequency_50:
+    name: '2x45 grp/5x45 ind'
+  Frequency_51:
+    name: '5x45 shared'
+  Frequency_52:
+    name: '6x month'
+  Frequency_53:
+    name: Extended
+  Frequency_54:
+    name: '10 hrs week'
+  Frequency_55:
+    name: 'Extended shared'
+  Frequency_56:
+    name: '2x shared'
+  Frequency_57:
+    name: '1x month co visit'
+  Frequency_58:
+    name: 3x120
+  Frequency_59:
+    name: 1x180
+  Frequency_60:
+    name: '180 min/weekly'
+  Frequency_61:
+    name: '5x90 shared'
+  Frequency_62:
+    name: '5 X 2 hrs'
+  Frequency_63:
+    name: '3 hrs/3 days'
+  Frequency_64:
+    name: '20 hrs week'
+  Frequency_65:
+    name: '2x month'
+  Frequency_66:
+    name: '6 hrs/day'
+  Frequency_67:
+    name: '4x60 shared'
+  Frequency_68:
+    name: ''
+  Frequency_69:
+    name: ''
+Office:
+  Office_1:
+    name: Plattsburgh
+  Office_2:
+    name: 'Rouses Point'

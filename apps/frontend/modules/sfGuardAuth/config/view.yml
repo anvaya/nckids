@@ -1,0 +1,3 @@
+all:
+  layout: login
+  stylesheets:     [-*, common.css, tables.css]

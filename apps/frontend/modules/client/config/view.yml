@@ -1,0 +1,11 @@
+all:
+  javascripts: [tableActions.min.js]
+  components:
+    sidebar:  [client, sidebar]
+newSuccess:
+  components:
+    editbar:  [client, editbarNew]
+editSuccess:
+  components:
+    editbar:  [client, editbarEdit]
+    sidebar:  [client, sidebarEdit]

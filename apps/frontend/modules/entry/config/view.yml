@@ -1,0 +1,36 @@
+all:
+  components:
+    sidebar:  [entry, sidebar]
+  javascripts: [jquery-ui.js, note-entry.js]
+
+showClientSuccess:
+  components:
+    sidebar:  [entry, clientSidebar]
+
+monthlyNotesReportClassroom:
+  stylesheets:
+    - -*
+    - print.css: { media: 'print,screen' }
+  javascripts:    [-*]
+  layout: print
+
+monthlyNotesReportEi:
+  stylesheets:
+    - -*
+    - print.css: { media: 'print,screen' }
+  javascripts:    [-*]
+  layout: print
+
+monthlyNotesReportSeit:
+  stylesheets:
+    - -*
+    - print.css: { media: 'print,screen' }
+  javascripts:    [-*]
+  layout: print
+
+monthlyNotesReportPreschool:
+  stylesheets:
+    - -*
+    - print.css: { media: 'print,screen' }
+  javascripts:    [-*]
+  layout: print

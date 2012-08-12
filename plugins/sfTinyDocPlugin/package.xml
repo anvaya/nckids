@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.4.6" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>sfTinyDocPlugin</name>
+ <channel>plugins.symfony-project.org</channel>
+ <summary>symfony sfTinyDoc plugin</summary>
+ <description>The sfTinyDocPlugin allows to generate OpenDocument (OpenOffice) and Word 2007 documents.</description>
+ <lead>
+  <name>Olivier LOYNET</name>
+  <user>oloynet</user>
+  <email>olivierloynet@gmail.com</email>
+  <active>yes</active>
+ </lead>
+
+ <date>2009-05-09</date>
+ <time>14:00:00</time>
+
+ <version>
+  <release>1.0.3</release>
+  <api>1.0.3</api>
+ </version>
+
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+
+ <license uri="http://www.symfony-project.org/license">MIT license</license>
+ <notes>-</notes>
+
+ <contents>
+  <dir name="/">
+   <file role="data" name="README" />
+   <file role="data" name="LICENSE" />
+   <dir name="lib">
+    <file role="php" name="sfTinyDoc.class.php" />
+    <file role="php" name="tinyButStrong.class.php" />
+    <file role="php" name="tinyDoc.class.php" />
+   </dir>
+  </dir>
+ </contents>
+
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.1</min>
+   </pearinstaller>
+   <package>
+    <name>symfony</name>
+    <channel>pear.symfony-project.com</channel>
+    <min>1.0.0</min>
+    <max>1.2.0</max>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease />
+
+<changelog>
+
+  <release>
+    <version>
+      <release>1.0.3</release>
+      <api>1.0.3</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <license uri="http://www.symfony-project.org/license">MIT license</license>
+    <date>2009-05-09</date>
+    <license>MIT</license>
+    <notes>
+      * bug fixed #6436 : to a better support than escapeshellcmd PHP function used 
+    </notes>
+  </release>
+
+  <release>
+    <version>
+      <release>1.0.2</release>
+      <api>1.0.2</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <license uri="http://www.symfony-project.org/license">MIT license</license>
+    <date>2009-05-04</date>
+    <license>MIT</license>
+    <notes>
+      * support differents units for picture (cm, mm, in, px)
+
+      * the tinyDoc version in a constant, tinyDoc::VERSION
+
+      * bug fixed : news parameters [link, image and type] can merge with data type var and array
+    </notes>
+  </release>
+
+  <release>
+    <version>
+      <release>1.0.1</release>
+      <api>1.0.1</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <license uri="http://www.symfony-project.org/license">MIT license</license>
+    <date>2009-04-27</date>
+    <license>MIT</license>
+    <notes>
+      * mailing list created : tinydoc@googlegroups.com
+
+      * new parameter 'image' to merge automaticaly images in method __`meth_Locator_Replace()`__ 
+        * parameter 'image'.      Ex. : [b1.src;image]
+        * parameter 'image=25%'.  Ex. : [b1.src;image=25%]
+        * parameter 'image=200%'. Ex. : [b1.src;image=200%]
+        * parameter 'image=fit'.  Ex. : [b1.src;image=fit]
+        * parameter 'image=max'.  Ex. : [b1.src;image=max]
+
+      * new parameter 'link' to transform url in linkable text in method __`meth_Locator_Replace()`__ 
+        * parameter 'link'.       Ex. : [b1.url;link]
+        * parameter 'link=title'. Ex. : [b1.url;link=title]
+
+    </notes>
+  </release>
+
+  <release>
+    <version>
+      <release>1.0.0</release>
+      <api>1.0.0</api>
+    </version>
+    <stability>
+     <release>stable</release>
+     <api>stable</api>
+    </stability>
+    <license uri="http://www.symfony-project.org/license">MIT license</license>
+    <date>2009-04-22</date>
+    <license>MIT</license>
+    <notes>
+      * release 1.0
+    </notes>
+  </release>
+
+ </changelog>
+</package>

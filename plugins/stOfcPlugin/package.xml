@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.6.2" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>stOfcPlugin</name>
+ <channel>pear.symfony-project.com</channel>
+ <summary>Integrates "Open Flash Chart" for symfony framework.</summary>
+ <description>stOfcPlugin creates Flash Chart based on an array of data/values</description>
+ <lead>
+  <name>RASHID Dawood</name>
+  <user>drashid</user>
+  <email>daud55@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2009-04-14</date>
+ <time>02:30:45</time>
+ <version>
+  <release>1.0.1</release>
+  <api>1.0.1</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.symfony-project.com/license">MIT license</license>
+ <notes>-</notes>
+ <contents>
+  <dir name="/">
+   <file md5sum="573d934c93ded9412c06cfda28887052" name="config/routing.yml" role="data"/>
+   <file md5sum="cd1ea545f0b50d0f71b92a8429c3fed9" name="config/stOfcPluginConfiguration.class.php" role="data"/>
+   <file md5sum="d32239bcb673463ab874e80d47fae504" name="doc/gpl.txt" role="data"/>
+   <file md5sum="b0a0016817b3842ac432ba033af8e154" name="lib/ofc/open_flash_chart_object.php" role="data"/>
+   <file md5sum="8d4b1571844abde3e3710deae7786c89" name="lib/ofc/open-flash-chart.php" role="data"/>
+   <file md5sum="35887e93a5d7bbb9efa3c807ebadc600" name="lib/ofc/README.txt" role="data"/>
+   <file md5sum="a24965ceaffe1caf311ca0bd232d0eca" name="lib/stBar.class.php" role="data"/>
+   <file md5sum="48a04fb577beda5b00cd392b1aecdd8b" name="lib/stBar3D.class.php" role="data"/>
+   <file md5sum="35b6a895c87d4c156ba0c79e5f04a824" name="lib/stBarFade.class.php" role="data"/>
+   <file md5sum="a838b9388eb1073b8041052509e13535" name="lib/stBarGlass.class.php" role="data"/>
+   <file md5sum="dfb83fa202d3ada4449f32da6c39e517" name="lib/stBarOutline.class.php" role="data"/>
+   <file md5sum="dfb83fa202d3ada4449f32da6c39e517" name="lib/stBarSketch.class.php" role="data"/>
+   <file md5sum="9759aa5de84509cf2d51fcf4ef600545" name="lib/stCandle.class.php" role="data"/>
+   <file md5sum="07c6a20fa9df4993ad5d7b9bf9d88ca9" name="lib/stGraph.class.php" role="data"/>
+   <file md5sum="66a980a27796d25ed296168238fb6936" name="lib/stHlc.class.php" role="data"/>
+   <file md5sum="9210035617d9c534a810e95182b16063" name="lib/stLine.class.php" role="data"/>
+   <file md5sum="589b90de7bf149239aad6d8106a6fa4d" name="lib/stLineDot.class.php" role="data"/>
+   <file md5sum="831d090a75131c7f2879c616151db471" name="lib/stLineHollow.class.php" role="data"/>
+   <file md5sum="fad739f4cb3c185a28e0f48e71a99154" name="lib/stOfc.class.php" role="data"/>
+   <file md5sum="e983deeb2f0f33cb9b669a523472b5c5" name="lib/stPoint.class.php" role="data"/>
+   <file md5sum="802e0a728d1e6e16280d176913b68d8b" name="modules/stOfcExample/actions/actions.class.php" role="data"/>
+   <file md5sum="9686336d2cd6cc8ab6603ee1a7f14dc4" name="modules/stOfcExample/templates/indexSuccess.php" role="data"/>
+   <file md5sum="7a74d3d615135b674c63a0af6ce9420e" name="web/images/open-flash-chart.swf" role="data"/>
+   <file md5sum="fc36c10f8baf6c90e6eab2d0a761a0b2" name="web/js/swfobject.js" role="data"/>
+   <file md5sum="f14eec0de37cf1e53171a74e87576cea" name="LICENSE" role="data"/>
+   <file md5sum="9af8974db96b99ed71a096b73d8a2053" name="README" role="data"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.1.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.1</min>
+   </pearinstaller>
+   <package>
+    <name>symfony</name>
+    <channel>pear.symfony-project.com</channel>
+    <min>1.1.0</min>
+    <max>1.3.0</max>
+    <exclude>1.3.0</exclude>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease/>
+ <changelog>
+    <release>
+      <version>
+        <release>1.0.1</release>
+        <api>1.0.1</api>
+      </version>
+      <stability>
+       <release>stable</release>
+       <api>stable</api>
+      </stability>
+      <license uri="http://www.symfony-project.com/license">MIT license</license>
+      <date>2009-04-13</date>
+      <license>MIT</license>
+      <notes>
+        * [COil] Corrected some indentation problems
+        * [COil] package.xml, added the changelog section
+        * [COil] Corrected getBaseDir() private helper
+        * [COil] Corrected README
+        * [drashid] package.xml, corrected the problem of installation for symfony 1.2 
+      </notes>
+    </release>   
+ </changelog>
+</package>
