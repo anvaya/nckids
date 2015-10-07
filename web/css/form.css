@@ -12,7 +12,7 @@ list-style-image: none;
 /* Form style */
 form input[type=text]{font-size: 1em;}
 form select.date { width: 90px; padding: 2px}
-form select.filter_date { width: 55px; padding: 1px;-moz-border-radius: 0px; -webkit-border-radius:0px; }
+form select.filter_date { min-width: 55px; max-width: 65px; padding: 1px;-moz-border-radius: 0px; -webkit-border-radius:0px; }
 form label { font-weight:bold;display: inline-block; float: left; height: 2em; line-height: 2em; width: 200px; padding-right:20px;font-size: 1.2em; text-align: right;}
 form input[type=text], form textarea, form select { width: 280px; margin: 0; padding: 5px; color: #666; background: #f5f5f5; border: 1px solid #b2b2b2; font:1.2em "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif; -moz-border-radius: 5px; -webkit-border-radius:5px; }
 form input[type=text]:focus, form textarea:focus, form select:focus { border: 1px solid #999; background-color: #fff; color:#333; }

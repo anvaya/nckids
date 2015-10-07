@@ -1,5 +1,15 @@
 Options +FollowSymLinks +ExecCGI
 
+AuthType Basic
+AuthName "Please Log In"
+AuthUserFile /home/nckidsinc/domains/db.nckidsinc.com/.htpasswd
+Require valid-user
+Order deny,allow
+#Deny from all
+#Allow from 216.130.235.177
+Allow from all
+Satisfy any
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
 

@@ -119,7 +119,6 @@ class employeeActions extends autoEmployeeActions
 
     $pdf->SetDisplayMode('real');
     return $pdf->Output('newpdf.pdf', 'D');
- 
   }
 
   public function executeBatchPrintBadge(sfWebRequest $request){

@@ -79,7 +79,7 @@ class ClientServiceForm extends BaseClientServiceForm
     ));
 
     $this->widgetSchema->setHelps(array(
-      'start_date' => '<div class="dates"><span>Pre-defined dates: </span> <a href="#" title="Summer" onclick="javascript:prefillDate(\'client_service_start_date\', 07, 05, '.((date('m') < '07')?date('Y'):date('Y')+1).');prefillDate(\'client_service_end_date\', 08, 13, '.((date('m') < '07')?date('Y'):date('Y')+1).');return false;">(S)</a> <a href="#" title="Summer" onclick="javascript:prefillDate(\'client_service_start_date\', 09, 07, '.(date('Y')).');prefillDate(\'client_service_end_date\', 06, 24, '.(date('Y')+1).');return false;">(F)</a></div>'
+      'start_date' => '<div class="dates"><span>Pre-defined dates: </span> <a href="#" title="Summer" onclick="javascript:prefillDate(\'client_service_start_date\', 07, 08, '.((date('m') < '07')?date('Y'):date('Y')).');prefillDate(\'client_service_end_date\', 08, 16, '.((date('m') < '07')?date('Y'):date('Y')).');return false;">(S)</a> <a href="#" title="Summer" onclick="javascript:prefillDate(\'client_service_start_date\', 09, 04, '.(date('Y')).');prefillDate(\'client_service_end_date\', 06, 26, '.(date('Y')+1).');return false;">(F)</a></div>'
     ));
 
 		$this->widgetSchema->setFormFormatterName('list');

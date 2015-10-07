@@ -10,6 +10,7 @@
     matchContains: 0,
     cacheLength: 1,
     autoFill: 1,
+    max: 20,
     formatItem: function(row, i, max) {
      return row[0] + " [" + row[1] + "]";
     },

@@ -7,7 +7,7 @@ arqReportSuccess:
   layout: print
 
 crqReportSuccess:
-  stylesheets:    [-*, print.css {media: print}]
+  stylesheets:    [-*, print.css {media: print}, reports/crq.css]
   layout: print
   
 coreEvalReportSuccess:

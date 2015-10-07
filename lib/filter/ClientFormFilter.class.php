@@ -50,17 +50,24 @@ class ClientFormFilter extends BaseClientFormFilter
       #$this->widgetSchema['frequency_id']     = new sfWidgetFormPropelChoice(array('model' => 'Frequency', 'add_empty' => true));
       $this->widgetSchema['start_date']       = new sfWidgetFormFilterDate(array(
           'template' => 'between  - 
-                        <a href="#" title="Summer" onclick="javascript:prefillDate(\'client_filters_start_date_from\', \'7\', \'1\', \''.((date('m') < '7')?date('Y'):date('Y')).'\');prefillDate(\'client_filters_start_date_to\', \'7\', \'15\', \''.((date('m') < '7')?date('Y'):date('Y')).'\');return false;">(S)</a>&nbsp;
-                        <a href="#" title="Fall" onclick="javascript:prefillDate(\'client_filters_start_date_from\', \'9\', \'1\', \''.((date('m') < '9')?date('Y'):date('Y')).'\');prefillDate(\'client_filters_start_date_to\', \'9\', \'30\', \''.((date('m') < '9')?date('Y'):date('Y')).'\');return false;">(F)</a><br />%from_date%<br />and <br />%to_date%',
+                        <a href="#" id="prefill_start_date_summer" title="Summer" onclick="javascript:prefillDate(\'client_filters_start_date_from\', \'7\', \'1\', \''.((date('m') < '7')?date('Y'):date('Y')).'\');prefillDate(\'client_filters_start_date_to\', \'7\', \'15\', \''.((date('m') < '7')?date('Y'):date('Y')).'\');return false;">(S)</a>&nbsp;
+                        <a href="#" id="prefill_start_date_fall" title="Fall" onclick="javascript:prefillDate(\'client_filters_start_date_from\', \'9\', \'1\', \''.((date('m') < '9')?date('Y'):date('Y')).'\');prefillDate(\'client_filters_start_date_to\', \'9\', \'30\', \''.((date('m') < '9')?date('Y'):date('Y')).'\');return false;">(F)</a><br />%from_date%<br />and <br />%to_date%',
           'from_date' => new sfWidgetFormJQueryDate(array('image' => '/images/calendar.png', 'config' => '{}'),array('class'=>'filter_date')),
           'to_date' => new sfWidgetFormJQueryDate(array('image' => '/images/calendar.png', 'config' => '{}'),array('class'=>'filter_date')),
           'with_empty' => false
         ));
+            
+      
+      $widget = new sfWidgetFormJQueryDate(array('image' => '/images/calendar.png', 'config' => '{}'),array('class'=>'filter_date'));
+      
+      //new sfWidgetFormJQueryDate(array('image' => '/images/calendar.png', 'config' => '{}'),array('class'=>'filter_date'))
+      
+      
       $this->widgetSchema['end_date']         = new sfWidgetFormFilterDate(array(
         'template' => 'between  -
-                      <a href="#" title="Summer" onclick="javascript:prefillDate(\'client_filters_end_date_from\', \'8\', \'1\', \''.((date('m') < '8')?date('Y')+1:date('Y')).'\');prefillDate(\'client_filters_end_date_to\', \'8\', \'30\', \''.((date('m') < '8')?date('Y')+1:date('Y')).'\');return false;">(S)</a>&nbsp;
-                      <a href="#" title="Fall" onclick="javascript:prefillDate(\'client_filters_end_date_from\', \'6\', \'1\', \''.((date('m') < '6')?date('Y')+1:date('Y')).'\');prefillDate(\'client_filters_end_date_to\', \'6\', \'30\', \''.((date('m') < '6')?date('Y')+1:date('Y')).'\');return false;">(F)</a><br />%from_date%<br />and <br />%to_date%',
-        'from_date' => new sfWidgetFormJQueryDate(array('image' => '/images/calendar.png', 'config' => '{}'),array('class'=>'filter_date')),
+                      <a href="#" id="prefill_end_date_summer" title="Summer" onclick="javascript:prefillDate(\'client_filters_end_date_from\', \'8\', \'1\', \''.((date('m') < '8')?date('Y'):date('Y')).'\');prefillDate(\'client_filters_end_date_to\', \'8\', \'30\', \''.((date('m') < '8')?date('Y'):date('Y')).'\');return false;">(S)</a>&nbsp;
+                      <a href="#" id="prefill_end_date_fall" title="Fall" onclick="javascript:prefillDate(\'client_filters_end_date_from\', \'6\', \'1\', \''.((date('m') < '6')?date('Y')+1:date('Y')).'\');prefillDate(\'client_filters_end_date_to\', \'6\', \'30\', \''.((date('m') < '6')?date('Y')+1:date('Y')).'\');return false;">(F)</a><br />%from_date%<br />and <br />%to_date%',
+        'from_date' => $widget,
         'to_date' => new sfWidgetFormJQueryDate(array('image' => '/images/calendar.png', 'config' => '{}'),array('class'=>'filter_date')),
         'with_empty' => false
         ));

@@ -7,7 +7,7 @@
 
 <?php foreach ($client_entries as $client): ?>
 
-    <h2><a href="<?php echo url_for('entry/showClient?id='.$client['client']->getId()) ?>"><?php echo $client['client'] ?></a></h2>
+    <h2><a href="<?php echo url_for('entry/showClient?id='.((is_object($client['client']))?$client['client']->getId():'0')) ?>"><?php echo $client['client'] ?></a></h2>
     <table width="100%">
       <thead>
         <tr>

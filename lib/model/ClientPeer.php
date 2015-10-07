@@ -16,6 +16,7 @@ class ClientPeer extends BaseClientPeer
 		$c1->addOr($c2);
 		$c->add($c1);
 		$c->setLimit($limit);
+                $c->addDescendingOrderByColumn('id');
 		return self::doSelect($c);
 	}
 	

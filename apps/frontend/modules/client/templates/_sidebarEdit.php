@@ -12,6 +12,8 @@
   <li><a rel="facebox" href="<?php echo url_for('client/eiSummary?id='. $client->getId()) ?>">Core Eval Summary Form</a></li>
   <li><a href="<?php echo url_for('client/eiMulti?id='. $client->getId()) ?>">Multi Eval Form</a></li>
   <li><a href="<?php echo url_for('client/billingVoucher?id='. $client->getId()) ?>">Billing Voucher</a></li>
+  <li>--</li>
+  <li><a rel="facebox" href="<?php echo url_for('report/voucher?client_id='.$client->getId()); ?>">Print Clinton Voucher</a></li>
   </ul>
   
   </div>

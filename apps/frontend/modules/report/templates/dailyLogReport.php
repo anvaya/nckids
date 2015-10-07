@@ -29,13 +29,18 @@
                 <br />
                 [<?php echo $entry->getEmployee() ?>&nbsp;(<?php echo $entry->getClient() ?>)]
 <br />
+<?php
 
+if (array_key_exists($overlaps[$entry->getId()], $all_entries)):
+
+?>
 &mdash;                        <?php echo $all_entries[$overlaps[$entry->getId()]]->getEmployee()->getJob()->getShortName()  ?>:
                                      <?php echo $all_entries[$overlaps[$entry->getId()]]->getTimeIn('h:i a') .' - '. $all_entries[$overlaps[$entry->getId()]]->getTimeOut('h:i a') ?>
                         <br >
 &mdash;                        [<?php echo $all_entries[$overlaps[$entry->getId()]]->getEmployee() ?>&nbsp(<?php echo $all_entries[$overlaps[$entry->getId()]]->getClient() ?>)]
 
                         <br />
+<?php endif; ?>
                         </span>
               <?php else: ?>
 

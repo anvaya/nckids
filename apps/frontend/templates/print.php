@@ -4,6 +4,20 @@
     <?php include_http_metas() ?>
     <?php include_metas() ?>
     <?php include_title() ?>
+    <style type="text/css" media="print">
+        .page-break
+        {
+            page-break-after: always;
+            page-break-inside: auto;
+        }               
+    </style>
+    <style type="text/css">
+        body
+        {
+            font-family: arial, verdana, tahoma;
+            font-size: 11pt;
+        }
+    </style>            
   </head>
 <body>
 

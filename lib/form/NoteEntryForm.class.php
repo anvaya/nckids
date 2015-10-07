@@ -40,7 +40,7 @@ class NoteEntryForm extends BaseNoteEntryForm
 
     // this makes it so client service list only shows active services for this employee
     $c = new Criteria();
-    ClientServicePeer::addActive($c);
+    ClientServicePeer::addActive($c, strtotime('-14 days'));
     $c->add(ClientServicePeer::EMPLOYEE_ID, $this->getOption('employee_id'));
 
     // only classroom services

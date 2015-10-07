@@ -16,7 +16,7 @@ class clientActions extends autoClientActions
   public function executeAutocompleteName(sfWebRequest $request)
   {
     #$this->getResponse()->setHttpHeader('Content-type', 'application/json');
-    $this->clients = ClientPeer::searchByName($request->getParameter('q'), $request->getParameter('limit'));
+    $this->clients = ClientPeer::searchByName($request->getParameter('q'), $request->getParameter('limit',20));
     $this->setLayout(false);
     return sfView::SUCCESS;
   }

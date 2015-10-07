@@ -393,6 +393,7 @@ class reportActions extends sfActions
 
         // dont include waiting list kids
         $c->add(ClientServicePeer::WAITING_LIST, false);
+        $c->add(ClientServicePeer::SERVICE_ID, ServicePeer::SERVICE_TYPE_COMMUNITY , Criteria::NOT_EQUAL );
 
         $c->addAscendingOrderByColumn(ClientServicePeer::OFFICE_ID);
         $c->addAscendingOrderByColumn(ClientPeer::LAST_NAME);
@@ -556,10 +557,17 @@ class reportActions extends sfActions
     }
   }
   
-  public function executeVoucher(sfWebRequest $request){
+  public function executeVoucher(sfWebRequest $request){      
     $this->form = new ReportVoucherForm();
     if($request->getParameter('employee_id')) {
       $this->form->setDefault('employee_id', $request->getParameter('employee_id'));
+    }
+    
+    if( ($client_id = $request->getParameter('client_id')) )
+    {        
+        $this->form->setDefault('client_id', $client_id );
+        $client = ClientPeer::retrieveByPK($client_id);
+        $this->form->setDefault('client_name', $client->getFirstName()." ".$client->getLastName() );
     }
 
     if($request->isMethod('post')){
@@ -585,6 +593,12 @@ class reportActions extends sfActions
         else
           $c->add(ClientServicePeer::EMPLOYEE_ID, null, Criteria::ISNOTNULL);
 
+        
+        if($this->form->getValue('client_id') && $this->form->getValue('client_name'))
+        {
+           $c->add(ClientServicePeer::CLIENT_ID, $this->form->getValue('client_id') );
+        }
+        
       	// check that the service was active at any point during the selected month of the selected year
         $c->add(ClientServicePeer::START_DATE, ClientServicePeer::START_DATE.' <=\''. $date['year'].'-'.$date['month'].'-31\'', Criteria::CUSTOM);
 

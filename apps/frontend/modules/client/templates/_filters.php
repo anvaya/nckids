@@ -30,3 +30,17 @@
        </ul>
   </form>
 </div>
+<script type="text/javascript">
+    $(document).ready(function()
+    {        
+        if($('#client_filters_start_date_from_month').val().length == 0)
+        {
+            $('#prefill_start_date_summer').trigger('click');
+        }
+        
+        if($('#client_filters_end_date_from_month').val().length == 0)
+        {
+            $('#prefill_end_date_summer').trigger('click');            
+        }
+    });
+</script>
