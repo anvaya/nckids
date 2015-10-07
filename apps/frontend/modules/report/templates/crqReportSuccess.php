@@ -1,4 +1,13 @@
-
+<?php 
+ function getAge($birthday){
+ list($year, $month, $day) = explode("/", $birthday);
+ $year_diff  = date("Y") - $year;
+ $month_diff = date("m") - $month;
+ $day_diff   = date("d") - $day;
+ if ($day_diff < 0 && $month_diff==0) $year_diff--;
+ if ($day_diff < 0 && $month_diff < 0) $year_diff--;
+ return $year_diff;
+}?>
 <input class="noprint" type="button"  onClick="window.print()"  value="Print This Report"/>
 
 <?php slot('page_header');?>
@@ -9,6 +18,7 @@
     <thead>
         <tr>
           <th>Client Name</th>
+          <th>Age</th>
           <th>Program</th>
           <th>Service Type</th>
           <th>Therapist</th>
@@ -39,6 +49,7 @@
   ?>
     <tr<?php echo (is_object($client) && $client->getExternalService())? ' class="external_service"':'' ?>>
       <td><a href="<?php echo url_for('@client_edit?id='.$service->getClientId()) ?>"><?php echo $client ?></a> </td>
+      <td><?php echo getAge($service->getClient()->getDOB());?></td>
       <td><?php echo $service->getServiceType() ?></td>
       <td><?php echo $service->getService() ?></td>
       <td><?php echo $service->getEmployee() ?></td>
