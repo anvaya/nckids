@@ -14,6 +14,7 @@
   <li><a href="<?php echo url_for('client/billingVoucher?id='. $client->getId()) ?>">Billing Voucher</a></li>
   <li>--</li>
   <li><a rel="facebox" href="<?php echo url_for('report/voucher?client_id='.$client->getId()); ?>">Print Clinton Voucher</a></li>
+  <li><a rel="facebox" href="<?php echo url_for('report/voucher?is_substitute=1&client_id='.$client->getId()); ?>">Print Substitute Clinton Voucher</a></li>
   </ul>
   
   </div>

@@ -563,6 +563,11 @@ class reportActions extends sfActions
       $this->form->setDefault('employee_id', $request->getParameter('employee_id'));
     }
     
+    if($request->getParameter('is_substitute'))
+    {
+        $this->form->setDefault('is_substitute', 1);
+    }
+    
     if( ($client_id = $request->getParameter('client_id')) )
     {        
         $this->form->setDefault('client_id', $client_id );
@@ -627,9 +632,19 @@ class reportActions extends sfActions
 
       	$this->services = ClientServicePeer::doSelectJoinAll($c);
 
+        $is_substitute = $this->form->getValue('is_substitute');
+        if($is_substitute)
+        {
+            $template = $this->form->getValue('client_service_type').'SubstituteVoucher';
+        }
+        else
+        {
+            $template = $this->form->getValue('client_service_type').'Voucher';
+        }
+        
 		    // create the document
 		    $doc = new sfTinyDoc();
-		    $doc->createFrom(array('basename' => $this->form->getValue('client_service_type').'Voucher'));
+		    $doc->createFrom(array('basename' => $template) );
 		    $doc->loadXml('content.xml');
 
 		    $doc->mergeXmlField('cal_prev', $this->generateCalImage($date['day'],$date['month']-1,$date['year']));

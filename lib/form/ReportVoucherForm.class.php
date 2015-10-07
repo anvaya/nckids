@@ -7,10 +7,10 @@ class ReportVoucherForm extends sfForm
       'client_service_type' => new sfWidgetFormChoice(array('choices' => ClientServicePeer::getClassKeys())),
       'employee_id'      => new sfWidgetFormPropelChoice(array('model' => 'Employee', 'add_empty' => true)),
       'client_id' => new sfWidgetFormInputHidden(),
-      'client_name' => new sfWidgetFormInput(),
-        
+      'client_name' => new sfWidgetFormInput(),        
+      'is_substitute'=>new sfWidgetFormInputCheckbox(),     
       'date'      => new sfWidgetFormJQueryDate(array(
-      'image' => '/images/calendar.png',
+      'image' => '/images/calendar.png',      
       'config' => '{}',
       /*'days' => nckTools::generateTwoCharsRange(1, 31),
       'months' => nckTools::generateTwoCharsRange(1, 12),*/
@@ -24,7 +24,7 @@ class ReportVoucherForm extends sfForm
       'employee_id'        => 'Therapist',
       'date'        => 'Vouchers as of Date',
       'client_name'  => 'For Client',
-      ''  
+      'is_substitute'=> 'Print Substitute Voucher'  
     ));
 
     $this->setValidators(array(
@@ -32,6 +32,7 @@ class ReportVoucherForm extends sfForm
       'client_id'         => new sfValidatorPass(),  
       'client_name'         => new sfValidatorPass(),    
       'date'        => new sfValidatorPass(),
+      'is_substitute' => new sfValidatorPass(),  
       'employee_id'      => new sfValidatorPropelChoice(array('model' => 'Employee', 'column' => 'id', 'required' => false)),
     ));
 
